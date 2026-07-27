@@ -1,0 +1,29 @@
+[project]
+name = "footnote"
+version = "0.1.0"
+description = "Hybrid retrieval over SEC filings — pgvector + Postgres FTS, XBRL facts in relational tables, MCP server for Claude Desktop."
+readme = "README.md"
+authors = [
+    { name = "Wisam Bunni", email = "wisambbunni@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+footnote = "footnote:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.7",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
